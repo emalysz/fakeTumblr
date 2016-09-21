@@ -10,8 +10,21 @@ import UIKit
 
 class PhotoDetailsViewController: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
+    var image : UIImage!
+    var imageUrl: NSURL!
+    var caption: String!
+    
+    
+    @IBOutlet weak var captionLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        
+        imageView.setImageWithURL(imageUrl)
+        print(caption)
+        captionLabel.text = caption
 
         // Do any additional setup after loading the view.
     }
